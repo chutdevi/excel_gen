@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /excel_gen
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond $1 !^(index\.php|assets|css|images|font-awesome|plugins|js|jquery.filer)
+RewriteRule ^(.*)$ /excel_gen/index.php?/$1 [L]
